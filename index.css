@@ -1,3 +1,22 @@
 .pizzeria{
    text-align: center;
+   
+}
+.persoonlijk{
+   text-align: center;
+}
+table{
+   border:3px solid;
+   
+  
+}
+.textarea{
+float:right;
+}
+.datum{
+   height: 20px;
+}
+.btn{
+   width: 80px;
+   height: 25px;
 }
