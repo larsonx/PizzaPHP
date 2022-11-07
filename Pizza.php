@@ -52,7 +52,7 @@
             </p>
         <td>
         <div class="pizzamenu">
-        <h3 class="pizzeria">Pizza Menu</h3>
+        <h3 class="persoonlijk">Pizza Menu</h3>
         <p>
             <label class="pizza">Pizza Margherita €12,50:</label>
             <input type="text" name="naam" class="textarea">
