@@ -11,7 +11,7 @@
     <h3 class="pizzeria">Larson's Pizzeria</h3>
     <p 
     <div class= "tabel1">
-    <form method="get">
+    <form method="post">
 
 <!-- tabel data -->
 <table>
@@ -55,23 +55,23 @@
         <h3 class="pizzeria">Pizza Menu</h3>
         <p>
             <label class="pizza">Pizza Margherita €12,50:</label>
-            <input type="text" name="naam" class="textarea" required>
+            <input type="text" name="naam" class="textarea">
             </p>
         <p>
         <label class="pizza">Pizza Funghi €12,50:</label>
-            <input type="text" name="naam" class="textarea" required>
+            <input type="text" name="naam" class="textarea">
             </p>
         <p>
         <label class="pizza">Pizza Marina €13,95:</label>
-            <input type="text" name="naam" class="textarea" required>
+            <input type="text" name="naam" class="textarea">
             </p>
         <p>
         <label class="pizza">Pizza Hawai €11,50:</label>
-            <input type="text" name="naam" class="textarea" required>
+            <input type="text" name="naam" class="textarea">
             </p>
         <p>
             <label class="pizza">Pizza Quattro Formaggi €14,50:</label>
-            <input class=pizzat type="text" name="naam" class="textarea" required>
+            <input class=pizzat type="text" name="naam" class="textarea">
             </p>
             </td>
         </div>
