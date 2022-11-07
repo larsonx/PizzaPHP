@@ -11,7 +11,7 @@
     <h3 class="pizzeria">Larson's Pizzeria</h3>
     <p 
     <div class= "tabel1">
-    <form method="post">
+    <form action="index.php" method="POST">
 
 <!-- tabel data -->
 <table>
@@ -38,9 +38,9 @@
         </p>
     
         <label>Bezorgen of afhalen:
-            <select>
+            <select required>
             <option value=""disabled selected hidden>Maak uw Keuze</option>
-            <option value="bezorgen">Bezorgen</option>
+            <option value="bezorgen">Bezorgen </option>
             <option value="afhalen">Afhalen</option>
 
             </select>
@@ -48,7 +48,7 @@
             <input class="datum" type="date" value="2022-11-02"/>
             <input type="time" id="appt" name="appt"
                 min="17:00" max="24  :00" required>    
-            <button class="btn">Bestel</button>
+            <input type="submit" name="submit" value="Verzenden"/>
             </p>
         <td>
         <div class="pizzamenu">
