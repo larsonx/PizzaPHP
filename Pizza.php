@@ -11,7 +11,7 @@
     <h3 class="pizzeria">Larson's Pizzeria</h3>
     <p 
     <div class= "tabel1">
-    <for method="POST">
+    <form method="get">
 
 <!-- tabel data -->
 <table>
