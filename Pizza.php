@@ -55,23 +55,23 @@
         <h3 class="persoonlijk">Pizza Menu</h3>
         <p>
             <label class="pizza">Pizza Margherita €12,50:</label>
-            <input type="text" name="naam" value="p1" class="textarea">
+            <input type="number" name="quantity" id="quantity" min="1" value="1" class="textarea">
             </p>
         <p>
-        <label class="pizza">Pizza Funghi €12,50:</label>
-            <input type="text" name="naam" value="p2" class="textarea">
+            <label class="pizza">Pizza Funghi €12,50:</label>
+            <input type="number" name="quantity" id="quantity" min="1" value="1" class="textarea">
             </p>
         <p>
-        <label class="pizza">Pizza Marina €13,95:</label>
-            <input type="text" name="naam" value="p3" class="textarea">
+            <label class="pizza">Pizza Marina €13,95:</label>
+            <input type="number" name="quantity" id="quantity" min="1" value="1" class="textarea">
             </p>
         <p>
         <label class="pizza">Pizza Hawai €11,50:</label>
-            <input type="text" name="naam" value="p4" class="textarea">
+            <input type="number" name="quantity" id="quantity" min="1" value="1" class="textarea">
             </p>
         <p>
             <label class="pizza">Pizza Quattro Formaggi €14,50:</label>
-            <input class=pizzat type="text" name="naam" value="p5" class="textarea">
+            <input type="number" name="quantity" id="quantity" min="1" value="1" class="textarea">
             </p>
             </td>
         </div>
