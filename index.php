@@ -2,7 +2,6 @@
 
 if (isset($_POST['submit'])){ 
     $dag = date('l');
-
     $aantal1 =    $_POST['aantal1']* 12.50;
     $aantal2 =    $_POST['aantal2']* 12.50;
     $aantal3 =    $_POST['aantal3']* 13.95;
@@ -25,4 +24,5 @@ if ($dag == 'Friday' && $korting > 20){
     echo "€" . number_format($korting,2, ','); 
 }
 }
+
 ?>
