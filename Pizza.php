@@ -38,10 +38,10 @@
         </p>
     
         <label>Bezorgen of afhalen:
-            <select value="select" name="select" required>
+            <select value="select" name="select" id="select"required>
             <option value=""disabled selected hidden>Maak uw Keuze</option>
-            <option value="bezorgen" name="bezorgen" >Bezorgen </option>
-            <option value="afhalen">Afhalen</option>
+            <option value="bezorgen" name="bezorgen" id="5">Bezorgen </option>
+            <option value="afhalen" name="afhalen"   id="0">Afhalen</option>
 
             </select>
         <p>
