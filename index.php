@@ -16,11 +16,11 @@ if ($dag == 'Monday'){
     $aantal3 = $_POST['aantal3']* 7.50;
     $aantal4 = $_POST['aantal4']* 7.50;
     $aantal5 = $_POST['aantal5']* 7.50;
-    
+
 }
 if ($dag == 'Friday' && $korting > 20){
     $korting = $korting - ($korting * (15/100));
-  echo "€" . round($korting,2);
+    echo "€" . round($korting,2);
   
 }
 
