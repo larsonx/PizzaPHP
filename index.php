@@ -9,6 +9,7 @@ if (isset($_POST['submit'])){
     $aantal5 = $_POST['aantal5']* 11.50;
     $korting = $aantal1 + $aantal2 + $aantal3 + $aantal4 + $aantal5;
     $korting = $korting - ($korting * (15/100));
+    $bezorgen = 5;
 
 if ($dag == 'Monday'){
     $aantal1 = $_POST['aantal1']* 7.50;
@@ -16,7 +17,7 @@ if ($dag == 'Monday'){
     $aantal3 = $_POST['aantal3']* 7.50;
     $aantal4 = $_POST['aantal4']* 7.50;
     $aantal5 = $_POST['aantal5']* 7.50;
-
+    echo "€" . round($aantal1 + $aantal2 + $aantal3 + $aantal4 + $aantal5,2);
 }
 if ($dag == 'Friday' && $korting > 20){
     $korting = $korting - ($korting * (15/100));
