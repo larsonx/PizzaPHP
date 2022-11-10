@@ -28,8 +28,5 @@ if ($dag == 'Friday' && $korting > 20){
 
 
 
-
-
-
 }
 ?>
