@@ -1,83 +1,55 @@
-<!DOCTYPE html>
-<html lang="NL">
-<head>
-<title>Pizza Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+<?php
 
-    <h3 class="pizzeria">Larson's Pizzeria</h3>
-    <p 
-    <div class= "tabel1">
-    <form action="index.php" method="POST">
+if (isset($_POST['submit'])){ 
+    $dag = date('l');
+    $aantal1 =    $_POST['aantal1'];
+    $aantal2 =    $_POST['aantal2'];
+    $aantal3 =    $_POST['aantal3'];
+    $aantal4 =    $_POST['aantal4'];
+    $aantal5 =    $_POST['aantal5'];
+    $korting = 0;
+    $totaal_prijs = 0;
+    if ($dag == 'Monday'){
+        $totaal_prijs = ($aantal1 + $aantal2 + $aantal3 + $aantal4 + $aantal5)* 7.50;    
 
-<!-- tabel data -->
-<table>
-    <tr>
-        <td>
-    <!-- gegevens -->
-        <h3 class="persoonlijk">Persoons gegevens</h3>
-        <p>
-            <label>Naam:</label>
-            <input type="text" name="naam" class="textarea" required>
-        </p>
+    }else {
+        $totaal_prijs += $aantal1*12.50;
+        $totaal_prijs += $aantal2*12.50;
+        $totaal_prijs += $aantal3*13.95;
+        $totaal_prijs += $aantal4*11.50;
+        $totaal_prijs += $aantal5*14.50; 
+        if ($dag == 'Friday' && $totaal_prijs > 20){
+            $korting = $totaal_prijs * 0.15;
+
+    }
+
+$totaal_prijs = $totaal_prijs - $korting;
+echo "vrijdag korting €" . number_format($korting,2, ',')."<br>";
+echo "Te betalen: €" . number_format ($totaal_prijs,2, ',')."<br>";
+echo "Totaal: €" . number_format($totaal_prijs,2,',')."<br>";
+}
+die;
+
+
+
     
-        <p>
-            <label>Adres:</label>
-            <input type="text" name="adres" class="textarea" required>
-        </p>
-        <p>
-            <label>Postcode:</label>
-            <input type="text" name="postcode" class="textarea" required>
-        </p>
-        <p>
-            <label>Plaats:</label>
-            <input type="text" name="plaats" class="textarea" required>
-        </p>
+   
+    $bezorgen = $_POST['select'];
+
+    if($bezorgen == "bezorgen"){
+        
+       echo "bezorgen €" . number_format($aantal1 + $aantal2 + $aantal3 + $aantal4 + $aantal5 +5,2, ',');
+    }else{
+       echo "afhalen €" . number_format($aantal1 + $aantal2 + $aantal3 + $aantal4 + $aantal5 ,2, ',');
+    } 
+
     
-        <label>Bezorgen of afhalen:
-            <select value="select" name="select" id="select"required>
-            <option value=""disabled selected hidden>Maak uw Keuze</option>
-            <option value="bezorgen" name="bezorgen" id="5">Bezorgen </option>
-            <option value="afhalen" name="afhalen"   id="0">Afhalen</option>
+  
+  
 
-            </select>
-        <p>
-            <input class="datum" type="date" value="2022-11-02"/>
-            <input type="time" id="appt" name="appt"
-                min="17:00" max="24  :00" required>    
-            <input type="submit" name="submit" value="Verzenden"/>
-            </p>
-        <td>
-        <div class="pizzamenu">
-        <h3 class="persoonlijk">Pizza Menu</h3>
-        <p>
-            <label class="pizza">Pizza Margherita €12,50:</label>
-            <input type="number" name="aantal1" id="aantal1" min="0" value="0" class="textarea">
-            </p>
-        <p>
-            <label class="pizza">Pizza Funghi €12,50:</label>
-            <input type="number" name="aantal2" id="aantal2" min="0" value="0" class="textarea">
-            </p>
-        <p>
-            <label class="pizza">Pizza Marina €13,95:</label>
-            <input type="number" name="aantal3" id="aantal3" min="0" value="0" class="textarea">
-            </p>
-        <p>
-        <label class="pizza">Pizza Hawai €11,50:</label>
-            <input type="number" name="aantal4" id="aantal4" min="0" value="0" class="textarea">
-            </p>
-        <p>
-            <label class="pizza">Pizza Quattro Formaggi €14,50:</label>
-            <input type="number" name="aantal5" id="aantal5" min="0" value="0" class="textarea">
-            </p>
-            </td>
-        </div>
-    </table>
-</form>
+    
+    
+    }
 
-</body>
-</html> 
-
+ 
+?>
