@@ -30,5 +30,5 @@ if($bezorgen == "bezorgen"){
 }else{
     echo "€" . number_format($aantal1 + $aantal2 + $aantal3 + $aantal4 + $aantal5 ,2, ',');
 } 
- d
+ 
 ?>
