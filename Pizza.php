@@ -28,18 +28,20 @@ if (isset($_POST['submit'])){
     
         if ($dag == 'Friday' && $totaal_prijs > 20){
             $korting = $totaal_prijs * 0.15;
-
-
             $totaal_prijs = $totaal_prijs - $korting;
-
+            echo "vrijdag korting €" . number_format($korting,2, ',')."<br>";
+            echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";
 
     }
     
-    echo "vrijdag korting €" . number_format($korting,2, ',')."<br>";
-    echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";
+   
 
 }
+    if ($dag == 'Tuesday'&& 'Wednesday' && 'Thursday'){
+        echo $totaal_prijs;
 
+
+    }
 
     
   
