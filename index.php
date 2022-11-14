@@ -11,7 +11,7 @@
     <h3 class="pizzeria">Larson's Pizzeria</h3>
     <p 
     <div class= "tabel1">
-    <form action="pizza.php" method="POST">
+    <form action="index.php" method="POST">
 
 <!-- tabel data -->
 <table>
