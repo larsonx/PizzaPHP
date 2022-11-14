@@ -9,8 +9,12 @@ if (isset($_POST['submit'])){
     $aantal5 =    $_POST['aantal5'];
     $korting = 0;
     $totaal_prijs = 0;
+    $bezorgen = 0;
     if ($dag == 'Monday'){
-        $totaal_prijs = ($aantal1 + $aantal2 + $aantal3 + $aantal4 + $aantal5)* 7.50;    
+    $totaal_prijs = ($aantal1 + $aantal2 + $aantal3 + $aantal4 + $aantal5)* 7.50;  
+    echo "Maandag actie:  " . number_format($totaal_prijs,2, ',')."<br>";
+    echo "Te betalen: €" . number_format ($totaal_prijs,2, ',')."<br>";
+    echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";  
 
     }else {
         $totaal_prijs += $aantal1*12.50;
