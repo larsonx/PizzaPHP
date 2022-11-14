@@ -39,9 +39,7 @@ if (isset($_POST['submit'])){
     if ($dag == 'Tuesday'&& 'Wednesday' && 'Thursday'){
         echo $totaal_prijs;
 
-
     }
-
     
     }
 
