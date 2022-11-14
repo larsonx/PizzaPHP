@@ -20,22 +20,9 @@ if (isset($_POST['submit'])){
   echo "xd  ";
     }
 
-    function bezorgkosten($x, $bezorgen){
-        $totaalprijs = $x =5;
-        if($bezorgen == 'bezorgen'){
-           echo "bezorgkosten: €5,00<br>\n";
-       
-       }elseif($bezorgen == 'afhalen'){
-     echo "xd  ";
-       }
-     
-     }
-     
-
-
     if ($dag == 'Monday'){
     $totaal_prijs = ($pizza1 + $pizza2 + $pizza3 + $pizza4 + $pizza5)* 7.50; 
-    
+ 
     echo "maandag actie:  " . number_format($totaal_prijs,2, ',')."<br>";
     echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";    
     }else{   
