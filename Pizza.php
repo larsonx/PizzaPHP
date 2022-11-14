@@ -9,11 +9,11 @@ if (isset($_POST['submit'])){
     $aantal5 =    $_POST['aantal5'];
     $korting = 0;
     $totaal_prijs = 0;
-    $bezorgen = $_POST['select'];
+    $bezorgen = $_POST['bezorgen'];
 
     
     
-    if ($dag == 'Monday'){
+    if ($dag == 'Monday' ){
     $totaal_prijs = ($aantal1 + $aantal2 + $aantal3 + $aantal4 + $aantal5)* 7.50;  
 
     echo "maandag actie:  " . number_format($totaal_prijs,2, ',')."<br>";
@@ -33,21 +33,13 @@ if (isset($_POST['submit'])){
             echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";
 
     }
-    
-   
-
-}
+    }
     if ($dag == 'Tuesday'&& 'Wednesday' && 'Thursday'){
         echo $totaal_prijs;
 
 
     }
 
-    
-  
-  
-
-    
     
     }
 
