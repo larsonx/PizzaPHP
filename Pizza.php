@@ -14,7 +14,7 @@ if (isset($_POST['submit'])){
     
     if($bezorgen == 'bezorgen'){
         echo "bezorgkosten: €5,00<br>\n";
-        
+    
     }
     
     if ($dag == 'Monday'){
