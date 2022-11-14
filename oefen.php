@@ -1,3 +1,16 @@
-Function maken voor bezorgkosten (leren)
+<?php
+$te = "maken voor bezorgkosten";
 
 
+
+
+
+
+
+
+
+
+
+
+
+?>
