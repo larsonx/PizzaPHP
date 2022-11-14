@@ -21,27 +21,17 @@ if (isset($_POST['submit'])){
         if ($dag == 'Friday' && $totaal_prijs > 20){
             $korting = $totaal_prijs * 0.15;
 
+
+            $totaal_prijs = $totaal_prijs - $korting;
+
+
     }
+    echo "vrijdag korting €" . number_format($korting,2, ',')."<br>";
+    echo "Te betalen: €" . number_format ($totaal_prijs,2, ',')."<br>";
+    echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";
 
-$totaal_prijs = $totaal_prijs - $korting;
-echo "vrijdag korting €" . number_format($korting,2, ',')."<br>";
-echo "Te betalen: €" . number_format ($totaal_prijs,2, ',')."<br>";
-echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";
 }
-die;
 
-
-
-    
-   
-    $bezorgen = $_POST['select'];
-
-    if($bezorgen == "bezorgen"){
-        
-       echo "bezorgen €" . number_format($aantal1 + $aantal2 + $aantal3 + $aantal4 + $aantal5 +5,2, ',');
-    }else{
-       echo "afhalen €" . number_format($aantal1 + $aantal2 + $aantal3 + $aantal4 + $aantal5 ,2, ',');
-    } 
 
     
   
