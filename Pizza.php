@@ -20,10 +20,8 @@ if (isset($_POST['submit'])){
     if ($dag == 'Monday'){
     $totaal_prijs = ($pizza1 + $pizza2 + $pizza3 + $pizza4 + $pizza5)* 7.50;  
     echo "maandag actie:  " . number_format($totaal_prijs,2, ',')."<br>";
-    echo "Te betalen: €" . number_format($totaal_prijs+5,2, ',')."<br>";    
-
-    }else{
-        
+    echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";    
+    }else{   
         $totaal_prijs += $pizza1*12.50;
         $totaal_prijs += $pizza2*12.50;
         $totaal_prijs += $pizza3*13.95;
