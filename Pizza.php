@@ -1,17 +1,25 @@
 <?php
 
 if (isset($_POST['submit'])){ 
-    $dag = date('l');
-    $pizza1 =    $_POST['margherita'];
-    $pizza2 =    $_POST['funghi'];
-    $pizza3 =    $_POST['marina'];
-    $pizza4 =    $_POST['hawai'];
-    $pizza5 =    $_POST['quattroformaggi'];
-    $korting = 0;
-    $totaal_prijs = 0;
-    $bezorgen = $_POST['select'];
-    $bezorgkosten = 5.00;
-    $x=0;
+    $dag            =date('l');
+    $naam           =$_POST['naam'];
+    $adres          =$_POST['adres'];
+    $postcode       =$_POST['postcode'];
+    $plaats         =$_POST['plaats'];
+    $datum          =$_POST['datum'];
+    $time           =$_POST['time'];
+    $bez            =$_POST['bezorgen'];
+    $afh            =$_POST['afhalen'];
+    $pizza1         =$_POST['margherita'];
+    $pizza2         =$_POST['funghi'];
+    $pizza3         =$_POST['marina'];
+    $pizza4         =$_POST['hawai'];
+    $pizza5         =$_POST['quattroformaggi'];
+    $korting        =0;
+    $totaal_prijs   =0;
+    $bezorgen       =$_POST['select'];
+    $bezorgkosten   =5.00;
+    $x              =0;
    
         function bezorgkostenmaandag($x, $bezorgen, $pizza1,$pizza2,$pizza3,$pizza4,$pizza5){
         
