@@ -19,18 +19,18 @@ if (isset($_POST['submit'])){
     $bezorgkosten   =5.00;
     $x              =0;
    
-    echo "Gegevens"."<br>"."<br>";
-    echo "Naam: ". $_POST['naam']."<br>";
-    echo "Adres: ". $_POST['adres']."<br>";
-    echo "Postcode: ".$_POST['postcode']."<br>";
-    echo "Plaats: ".$_POST['plaats']."<br>";
-    echo "Datum: ".$_POST['datum']."<br>";
-    echo "Tijd: ".$_POST['appt']."<br>";
-    echo "Aantal margherita: ".$_POST['margherita']."<br>";
-    echo "Aantal funghi: ".$_POST['funghi']."<br>";
-    echo "Aantal marina: ".$_POST['marina']."<br>";
-    echo "Aantal hawai: ".$_POST['hawai']."<br>";
-    echo "Aantal quattroformaggi: ".$_POST['quattroformaggi']."<br>"."<br>";
+        echo "Gegevens"."<br>"."<br>";
+        echo "Naam: ". $_POST['naam']."<br>";
+        echo "Adres: ". $_POST['adres']."<br>";
+        echo "Postcode: ".$_POST['postcode']."<br>";
+        echo "Plaats: ".$_POST['plaats']."<br>";
+        echo "Datum: ".$_POST['datum']."<br>";
+        echo "Tijd: ".$_POST['appt']."<br>";
+        echo "Aantal margherita: ".$_POST['margherita']."<br>";
+        echo "Aantal funghi: ".$_POST['funghi']."<br>";
+        echo "Aantal marina: ".$_POST['marina']."<br>";
+        echo "Aantal hawai: ".$_POST['hawai']."<br>";
+        echo "Aantal quattroformaggi: ".$_POST['quattroformaggi']."<br>"."<br>";
 
         function bezorgkostenmaandag($x, $bezorgen, $pizza1,$pizza2,$pizza3,$pizza4,$pizza5){
         
