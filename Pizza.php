@@ -29,12 +29,12 @@ if (isset($_POST['submit'])){
    
         function vrijdag($bezorgen,$totaal_prijs,$korting){
         if($bezorgen == 'bezorgen'){
-          echo "vrijdag korting -€" . number_format($korting,2, ',')."<br>";
+          echo "vrijdag 15% korting  -€" . number_format($korting,2, ',')."<br>";
           echo "Bezorgkosten: €5,00"."<br>";
           echo"Totaal: €" . number_format($totaal_prijs+5,2, ',')."<br>";
         
     }   elseif($bezorgen == 'afhalen'){
-          echo "vrijdag korting -€" . number_format($korting,2, ',')."<br>";
+          echo "vrijdag 15% korting -€" . number_format($korting,2, ',')."<br>";
           echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";
           
     }
