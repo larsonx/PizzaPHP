@@ -27,7 +27,33 @@ if (isset($_POST['submit'])){
      
      }
    
-     
+     function vrijdag($bezorgen,$totaal_prijs,$korting){
+        if($bezorgen == 'bezorgen'){
+          echo "vrijdag korting -€" . number_format($korting,2, ',')."<br>";
+          echo "Bezorgkosten: €5,00"."<br>";
+          echo"Totaal: €" . number_format($totaal_prijs+5,2, ',')."<br>";
+        
+        }elseif($bezorgen == 'afhalen'){
+          echo "vrijdag korting -€" . number_format($korting,2, ',')."<br>";
+          echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";
+          
+        }
+        }
+
+        function diwodo($bezorgen,$totaal_prijs){
+            if($bezorgen == 'bezorgen'){
+              
+              echo "Bezorgkosten: €5,00"."<br>";
+              echo"Subtotaal: €" . number_format($totaal_prijs,2, ',')."<br>";
+              echo"Totaal: €" . number_format($totaal_prijs+5,2, ',')."<br>";
+            
+            }elseif($bezorgen == 'afhalen'){
+              
+              echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";
+              
+            }
+            }
+
     if ($dag == 'Monday'){
     $totaal_prijs = ($pizza1 + $pizza2 + $pizza3 + $pizza4 + $pizza5)* 7.50;    
     bezorgkostenmaandag($x, $bezorgen,$pizza1,$pizza2,$pizza3,$pizza4,$pizza5);    
@@ -39,18 +65,18 @@ if (isset($_POST['submit'])){
         $totaal_prijs += $pizza4*11.50;
         $totaal_prijs += $pizza5*14.50; 
     
-        if ($dag == 'Tuesday' && $totaal_prijs > 20){
+        if ($dag == 'Friday' && $totaal_prijs > 20){
             $korting = $totaal_prijs * 0.15;
                
             $totaal_prijs = $totaal_prijs - $korting;
-            echo "vrijdag korting €" . number_format($korting,2, ',')."<br>";
-            echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";
-
+            vrijdag($bezorgen,$totaal_prijs,$korting); 
+            
+            
     }
     }
-    if ($dag == ''&& 'Wednesday' && 'Thursday'){
-        echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";
+    if ($dag == 'Tuesday'&& 'Wednesday' && 'Thursday'){
         
+        diwodo($bezorgen,$totaal_prijs);
     }
     
     }
