@@ -2,11 +2,11 @@
 
 if (isset($_POST['submit'])){ 
     $dag = date('l');
-    $pizza1 =    $_POST['pizza1'];
-    $pizza2 =    $_POST['pizza2'];
-    $pizza3 =    $_POST['pizza3'];
-    $pizza4 =    $_POST['pizza4'];
-    $pizza5 =    $_POST['pizza5'];
+    $pizza1 =    $_POST['margherita'];
+    $pizza2 =    $_POST['funghi'];
+    $pizza3 =    $_POST['marina'];
+    $pizza4 =    $_POST['hawai'];
+    $pizza5 =    $_POST['quattroformaggi'];
     $korting = 0;
     $totaal_prijs = 0;
     $bezorgen = $_POST['select'];
