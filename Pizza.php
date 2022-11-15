@@ -13,13 +13,19 @@ if (isset($_POST['submit'])){
     $bezorgkosten = 5.00;
     $x=0;
    
-    if($bezorgen == 'bezorgen'){
-        echo "bezorgkosten: €5,00<br>\n";
-    
-    }elseif($bezorgen == 'afhalen'){
-  echo "xd  ";
-    }
-
+    function bezorgkosten($x, $bezorgen, $pizza1,$pizza2,$pizza3,$pizza4,$pizza5){
+        
+        if($bezorgen == 'bezorgen'){
+            $totaalprijs = $x;
+         echo   $x = ($pizza1 + $pizza2 + $pizza3 + $pizza4 + $pizza5)* 7.50 +5;     
+       
+       }elseif($bezorgen == 'afhalen'){
+        echo   $x = ($pizza1 + $pizza2 + $pizza3 + $pizza4 + $pizza5)* 7.50; 
+       }
+     
+     }
+   
+     
     if ($dag == 'Monday'){
     $totaal_prijs = ($pizza1 + $pizza2 + $pizza3 + $pizza4 + $pizza5)* 7.50; 
  
@@ -37,13 +43,13 @@ if (isset($_POST['submit'])){
             
             $totaal_prijs = $totaal_prijs - $korting;
             echo "vrijdag korting €" . number_format($korting,2, ',')."<br>";
-            echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";
+            
 
     }
     }
     if ($dag == 'Tuesday'&& 'Wednesday' && 'Thursday'){
-        echo $totaal_prijs;
-
+        echo "Totaal: €" . number_format($totaal_prijs,2, ',')."<br>";
+        bezorgkosten($x, $bezorgen,$pizza1,$pizza2,$pizza3,$pizza4,$pizza5);
     }
     
     }
