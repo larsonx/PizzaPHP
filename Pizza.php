@@ -20,6 +20,21 @@ if (isset($_POST['submit']))
     $bezorgkosten   =5.00;
     $x              =0;
    
+    //connectie
+    $conn = new mysqli('localhost','root','','pizzaphp');
+    if($conn->connect_error){
+        die('Connection Failed    :  '.$conn->connect_error);  
+    }else{
+        $stmt = $conn->prepare("insert into info(naam, adres, postcode, plaats, datum, appt, margherita,funghi,marina,hawai,quattroformaggi)
+            values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param('sssssssssss',$naam,$adres,$postcode,$plaats,$datum,$appt,$time,$pizza1,$pizza2,$pizza3,$pizza4);
+            $stmt->execute();
+            echo "Uw bestelling is verwerkt";
+            $stmt->close();
+            $conn->close();
+        }
+
+
     echo "Gegevens"."<br>"."<br>";
     echo "Naam: ". $_POST['naam']."<br>";
     echo "Adres: ". $_POST['adres']."<br>";
