@@ -29,7 +29,7 @@ if (isset($_POST['submit']))
             values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $stmt->bind_param('sssssssssss',$naam,$adres,$postcode,$plaats,$datum,$appt,$time,$pizza1,$pizza2,$pizza3,$pizza4);
             $stmt->execute();
-            echo "Uw bestelling is verwerkt";
+            echo "Uw bestelling is verwerkt"."<br>"."<br>";
             $stmt->close();
             $conn->close();
         }
