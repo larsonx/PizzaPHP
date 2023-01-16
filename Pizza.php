@@ -41,7 +41,7 @@ if (isset($_POST['submit']))
                 values(?)");
                 $stmtt->bind_param('s',$naam);
                 $stmtt->execute();
-                echo "Uw bestelling is verwerkt"."<br>"."<br>";
+                
                 $stmtt->close();
                 $connn->close();
 
