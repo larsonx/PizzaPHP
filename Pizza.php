@@ -25,14 +25,26 @@ if (isset($_POST['submit']))
     if($conn->connect_error){
         die('Connection Failed    :  '.$conn->connect_error);  
     }else{
-        $stmt = $conn->prepare("insert into info(naam, adres, postcode, plaats, datum, appt, margherita,funghi,marina,hawai,quattroformaggi)
+        $stmt = $conn->prepare("insert into info(adres, postcode, plaats, datum, appt,time, margherita,funghi,marina,hawai,quattroformaggi)
             values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param('sssssssssss',$naam,$adres,$postcode,$plaats,$datum,$appt,$time,$pizza1,$pizza2,$pizza3,$pizza4);
+            $stmt->bind_param('sssssssssss',$adres,$postcode,$plaats,$datum,$appt,$time,$pizza1,$pizza2,$pizza3,$pizza4,$pizza5 );
             $stmt->execute();
             echo "Uw bestelling is verwerkt"."<br>"."<br>";
             $stmt->close();
             $conn->close();
         }
+        $connn = new mysqli('localhost','root','','pizzaphp');
+        if($connn->connect_error){
+            die('Connection Failed    :  '.$connn->connect_error);  
+        }else{
+            $stmtt = $connn->prepare("insert into name(naam)
+                values(?)");
+                $stmtt->bind_param('s',$naam );
+                $stmtt->execute();
+                
+                $stmtt->close();
+                $connn->close();
+            }
 
 
     echo "Gegevens"."<br>"."<br>";
