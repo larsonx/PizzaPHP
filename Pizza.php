@@ -25,26 +25,17 @@ if (isset($_POST['submit']))
     if($conn->connect_error){
         die('Connection Failed    :  '.$conn->connect_error);  
     }else{
-        $stmt = $conn->prepare("insert into bestellingen(adres, postcode, plaats, datum, appt,time, margherita,funghi,marina,hawai,quattroformaggi)
-            values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param('sssssssssss',$adres,$postcode,$plaats,$datum,$appt,$time,$pizza1,$pizza2,$pizza3,$pizza4,$pizza5 );
+        $stmt = $conn->prepare("insert into bestellingen(naam, adres, postcode, plaats, datum, appt,time, margherita,funghi,marina,hawai,quattroformaggi)
+            values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param('ssssssssssss',$naam,$adres,$postcode,$plaats,$datum,$appt,$time,$pizza1,$pizza2,$pizza3,$pizza4,$pizza5 );
             $stmt->execute();
             echo "Uw bestelling is verwerkt"."<br>"."<br>";
             $stmt->close();
             $conn->close();
         }
-        $connn = new mysqli('localhost','root','','pizzaphp');
-        if($connn->connect_error){
-            die('Connection Failed    :  '.$connn->connect_error);  
-        }else{
-            $stmtt = $connn->prepare("insert into naam_id(naam)
-                values(?)");
-                $stmtt->bind_param('s',$naam);
-                $stmtt->execute();
-                $stmtt->close();
-                $connn->close();
+      
 
-        }
+        
     echo "Gegevens"."<br>"."<br>";
     echo "Naam: ". $_POST['naam']."<br>";
     echo "Adres: ". $_POST['adres']."<br>";
