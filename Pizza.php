@@ -37,11 +37,10 @@ if (isset($_POST['submit']))
         if($connn->connect_error){
             die('Connection Failed    :  '.$connn->connect_error);  
         }else{
-            $stmtt = $connn->prepare("insert into naam(naam)
+            $stmtt = $connn->prepare("insert into naam_id(naam)
                 values(?)");
                 $stmtt->bind_param('s',$naam);
                 $stmtt->execute();
-                
                 $stmtt->close();
                 $connn->close();
 
