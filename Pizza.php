@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
     if ($conn->connect_error) {
         die('Connection Failed    :  ' . $conn->connect_error);
     } else {
-        $stmt = $conn->prepare("insert into bestellingen(naam, adres, postcode, plaats,time, margherita,funghi,marina,hawai,quattroformaggi)
+        $stmt = $conn->prepare("insert into bestellingen(naam, adres, postcode, plaats,tijd, margherita,funghi,marina,hawai,quattroformaggi)
             values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param('ssssssssss', $naam, $adres, $postcode, $plaats,$time, $pizza1, $pizza2, $pizza3, $pizza4, $pizza5);
         $stmt->execute();
