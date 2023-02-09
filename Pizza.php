@@ -7,7 +7,7 @@ if (isset($_POST['submit']))
     $adres          =$_POST['adres'];
     $postcode       =$_POST['postcode'];
     $plaats         =$_POST['plaats'];
-    $datum          =$_POST['datum'];
+    $datum          =(strtotime($_POST['datum']));
     $time           =$_POST['appt'];
     $pizza1         =$_POST['margherita'];
     $pizza2         =$_POST['funghi'];
@@ -125,6 +125,12 @@ if (isset($_POST['submit']))
         {
             diwodo($bezorgen,$totaal_prijs);
         }
+
+        if (strtotime("now") < $datum){
+        echo "test";
+        }
+
+    
         
        
 }
