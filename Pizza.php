@@ -126,9 +126,7 @@ if (isset($_POST['submit']))
             diwodo($bezorgen,$totaal_prijs);
         }
 
-        if (strtotime("now") < $datum){
-        echo "test";
-        }
+    
 
     
         
