@@ -46,7 +46,7 @@
 
                         </select>
                         <p>
-                            <input type="date" name="datum" class="datum" value="<?php echo date("Y-m-d");?>">
+                            <input type="date" name="datum" class="datum" value="<?php echo date("Y-m-d"); ?>">
                             <input type="time" id="appt" name="appt" min="17:00" max="24  :00" required>
                             <input type="submit" name="submit" value="Verzenden" />
                         </p>
