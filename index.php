@@ -47,7 +47,7 @@
                         </select>
                         <p>
                             
-                            <input type="time" id="appt" name="appt" min="17:00" max="24  :00" required>
+                            <input type="time" id="time" name="time" min="17:00" max="24  :00" required>
                             <input type="submit" name="submit" value="Verzenden" />
                         </p>
                 <td>
